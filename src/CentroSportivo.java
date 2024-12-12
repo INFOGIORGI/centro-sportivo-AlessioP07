@@ -20,7 +20,7 @@ public class CentroSportivo{
 
     public boolean rimuoviSocio(String codiceSocio){
         if(listaSoci.containsKey(codiceSocio)){
-            listaSoci.remove(s, codiceSocio);
+            listaSoci.remove(codiceSocio);
             return true;
         }
         return false;
