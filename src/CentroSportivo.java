@@ -8,7 +8,7 @@ public class CentroSportivo{
         this.listaSoci = new HashMap<>();
         this.listaIstruttori = new HashMap<>();
     }
-    
+
     public boolean aggiungiSocio(String nome, String cognome, String codiceSocio){
         if(!listaSoci.containsKey(codiceSocio)){
             Socio s = new Socio(nome, cognome, codiceSocio);
@@ -52,7 +52,7 @@ public class CentroSportivo{
     }
 
     public boolean assegnaIstruttore(String codiceSocio, String codiceIstruttore){
-        if(!listaSoci.containsKey(codiceIstruttore) || listaIstruttori.containsKey(codiceIstruttore) || listaSoci.get(codiceSocio).getIstruttoreAssegnato() != null){
+        if(!listaSoci.containsKey(codiceSocio) || !listaIstruttori.containsKey(codiceIstruttore) || listaSoci.get(codiceSocio).getIstruttoreAssegnato() != null){
             return false;
         }
         else{
